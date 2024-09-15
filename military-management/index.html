@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Head section including metadata and links to CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battalion Force Management</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <p id="form-header-text">BATTALION FORCE MANAGEMENT</p>
+    </header>
+
+    <main>
+        <!-- Create Soldier Section -->
+        <section id="create-section" class="section">
+            <div class="form-container">
+                <form id="soldier-form" class="form">
+                    <!-- Full Name Field -->
+                    <label for="full-name" class="visually-hidden">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Full Name:" required>
+
+                    <!-- Rank Field -->
+                    <label for="rank" class="visually-hidden">Rank:</label>
+                    <input type="text" id="rank" name="rank" placeholder="Rank:" required>
+
+                    <!-- Role Field -->
+                    <label for="role" class="visually-hidden">Role:</label>
+                    <input type="text" id="role" name="role" placeholder="Role:" required>
+
+                    <!-- Company Field -->
+                    <label for="company" class="visually-hidden">Company:</label>
+                    <input type="text" id="company" name="company" placeholder="Company:" required>
+
+                    <!-- Mission Time Field -->
+                    <label for="mission-time" class="visually-hidden">Mission Time (seconds):</label>
+                    <input type="number" id="mission-time" name="mission-time" placeholder="Mission Time (seconds):" required>
+
+                    <!-- Status Field -->
+                    <label for="status" class="visually-hidden">Status:</label>
+                    <select name="status" id="status" required>
+                        <option value="Active">Active</option>
+                        <option value="Reserve">Reserve</option>
+                        <option value="Retired">Retired</option>
+                    </select>
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="save-soldier-btn">Add Soldier</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Edit Soldier Section (hidden by default) -->
+        <section id="edit-section" class="section hidden">
+            <div class="form-container">
+                <form id="edit-soldier-form" class="form">
+                    <!-- Full Name Field -->
+                    <label for="edit-full-name" class="visually-hidden">Full Name:</label>
+                    <input type="text" id="edit-full-name" name="full-name" placeholder="Full Name:" required>
+
+                    <!-- Rank Field -->
+                    <label for="edit-rank" class="visually-hidden">Rank:</label>
+                    <input type="text" id="edit-rank" name="rank" placeholder="Rank:" required>
+
+                    <!-- Role Field -->
+                    <label for="edit-role" class="visually-hidden">Role:</label>
+                    <input type="text" id="edit-role" name="role" placeholder="Role:" required>
+
+                    <!-- Company Field -->
+                    <label for="edit-company" class="visually-hidden">Company:</label>
+                    <input type="text" id="edit-company" name="company" placeholder="Company:" required>
+
+                    <!-- Mission Time Field -->
+                    <label for="edit-mission-time" class="visually-hidden">Mission Time (seconds):</label>
+                    <input type="number" id="edit-mission-time" name="mission-time" placeholder="Mission Time (seconds):" required>
+
+                    <!-- Status Field -->
+                    <label for="edit-status" class="visually-hidden">Status:</label>
+                    <select name="status" id="edit-status" required>
+                        <option value="Active">Active</option>
+                        <option value="Reserve">Reserve</option>
+                        <option value="Retired">Retired</option>
+                    </select>
+
+                    <!-- Save and Cancel Buttons -->
+                    <button type="submit" id="save-edit-soldier-btn">Save Changes</button>
+                    <button type="button" id="cancel-edit">Cancel</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Soldiers Overview Section -->
+        <section id="overview-section" class="section">
+            <div id="overview-header" class="header">
+                <p>FORCES OVERVIEW</p>
+            </div>
+
+            <div id="soldiers-list-container" class="list-container">
+                <table id="soldiers-table" class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <button id="sort-soldiers-btn" class="sort-button">Full Name ↓</button>
+                            </th>
+                            <th>Rank</th>
+                            <th>Role</th>
+                            <th>Company</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="soldiers-table-body">
+                        <!-- Soldier rows will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include JavaScript files -->
+    <script src="./soldiers.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

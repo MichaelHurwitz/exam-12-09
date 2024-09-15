@@ -1,0 +1,190 @@
+/* Base styles for html and body */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2C3E50; /* Dark blue background */
+    color: #fff; /* White text color */
+}
+
+body header {
+    width: 100%;
+    height: 6%;
+    background-color: #2C3E50; /* Same as body background */
+    color: #27AE60; /* Green text color */
+    position: fixed;
+    top: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.125rem solid #6df29a; /* Green bottom border */
+    display: flex;
+}
+
+body header #form-header-text {
+    margin: 0;
+}
+
+body main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6%; /* Space for fixed header */
+    box-sizing: border-box;
+}
+
+body main #create-section,
+body main #edit-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 1.25rem; /* Adjusted margin using rem */
+}
+
+body main .form-container {
+    padding: 3%;
+    width: 60%;
+    background-color: #34495E; /* Slightly lighter blue */
+    border-radius: 0.625rem; /* Adjusted border radius using rem */
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5); /* Adjusted shadow using rem */
+    margin: 0 auto;
+}
+
+body main .form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+body main .form-container form input,
+body main .form-container form select,
+body main .form-container form button {
+    width: 100%;
+    margin-bottom: 0.625rem; /* Adjusted margin using rem */
+    background-color: #22313F; /* Darker input background */
+    color: white;
+    border: none;
+    padding: 0.625rem; /* Adjusted padding using rem */
+}
+
+body main .form-container form button {
+    background-color: #27AE60; /* Green button */
+    color: white;
+    cursor: pointer;
+    font-size: 0.875rem; /* Adjusted font size using rem */
+}
+
+body main #overview-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+body main #overview-section > #overview-header {
+    width: 100%;
+    background-color: #2C3E50; /* Match header background */
+    color: #27AE60;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.125rem solid #27AE60; /* Adjusted border using rem */
+    display: flex;
+    box-sizing: border-box;
+}
+
+body main #soldiers-list-container {
+    width: 100%;
+    padding: 0.625rem; /* Adjusted padding using rem */
+    background-color: #34495E;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+body main #soldiers-list-container table {
+    width: 100%;
+    max-width: 75rem; /* Adjusted max-width using rem */
+    background-color: #2C3E50;
+    border-collapse: collapse;
+}
+
+body main #soldiers-list-container th,
+body main #soldiers-list-container td {
+    padding: 0.625rem; /* Adjusted padding using rem */
+    border: 0.0625rem solid #27AE60; /* Adjusted border thickness using rem */
+    text-align: center;
+    color: #fff;
+}
+
+body main #soldiers-list-container td button {
+    background-color: #27AE60;
+    color: white;
+}
+
+body main #soldiers-list-container th {
+    background-color: white;
+    color: #6df29a;
+}
+
+body main #soldiers-list-container td {
+    background-color: #243447; /* Darker row background */
+    color: #fff;
+}
+
+.sort-button {
+    background-color: #27AE60;
+    color: #fff;
+    padding: 0.625rem 1.25rem; /* Adjusted padding using rem */
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.sort-button:hover {
+    background-color: #5cdb88; /* Lighter green on hover */
+}
+
+.hidden {
+    display: none !important;
+}
+
+#cancel-edit {
+    background-color: red;
+    color: white;
+}
+
+/* Styles for the action buttons in a column */
+.button-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-group button:last-child {
+    margin-bottom: 0;
+}
+
+/* Visually hide labels but keep them accessible */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
